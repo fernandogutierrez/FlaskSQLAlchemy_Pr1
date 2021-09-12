@@ -1,6 +1,6 @@
 from flask import request, jsonify, abort
-from db_connector import DBConnector
-from content_manager import ContentManager
+from model.db_connector import DBConnector
+from model.content_manager import ContentManager
 
 app = DBConnector().app
 API_NAME = "/api/v1"
@@ -73,7 +73,3 @@ def delete_pet(pet_id):
     """
     if ContentManager.delete_pet(pet_id) != 1:
         return jsonify(Message=f"The given pet id <{pet_id}> was not found"), 404
-
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=True, port=5000, use_reloader=True)

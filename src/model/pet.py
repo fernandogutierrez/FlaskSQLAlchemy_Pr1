@@ -1,4 +1,4 @@
-from db_connector import DBConnector
+from model.db_connector import DBConnector
 
 db = DBConnector().db
 ma = DBConnector().ma

@@ -1,6 +1,6 @@
-from db_connector import DBConnector
-from pet import Pet, PetSchema
-from model.utils import datetime
+from model.db_connector import DBConnector
+from model.pet import Pet, PetSchema
+from utils import datetime
 
 db = DBConnector().db
 
